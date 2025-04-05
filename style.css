@@ -10,6 +10,6 @@ nav {
     background: #FFBCDC;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding: 0rem calc((100vw - 1300px) / 2);
 }

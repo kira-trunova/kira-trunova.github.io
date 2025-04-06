@@ -22,9 +22,13 @@ nav {
     padding: 0 2rem;
 }
 
+.logo:hover {
+    color: #fff;
+}
+
 nav a {
     text-decoration: none;
-    color: #000;
+    color: #151010;
     padding: 0 1.5rem;
 }
 

@@ -71,10 +71,8 @@ nav a:hover {
 }
 
 .hero-image {
-    height: auto;
-    width: auto;
-    max-width: 500px;
-    max-height: 500px;
+    height: 300px;
+    width: 300px;
     object-fit: contain;
 }
 

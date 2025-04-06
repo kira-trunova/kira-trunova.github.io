@@ -71,8 +71,10 @@ nav a:hover {
 }
 
 .hero-image {
-    width: 50%;
-    height: 50%;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 @media screen and (max-width: 768px) {

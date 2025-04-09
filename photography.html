@@ -9,6 +9,7 @@
     <script src='main.js'></script>
 </head>
 <body>
+
     <nav>
         <div class="logo">
             <a href="/">Kira's webpage</a>
@@ -21,15 +22,35 @@
             <a href="/">olympiads</a>
         </div>
     </nav>
-    <div class="img-gallery">
-        <img src="./images/IMG_0485.jpg">
-        <img src="./images/IMG_0486.jpg">
-        <img src="./images/IMG_0487.jpg">
-        <img src="./images/IMG_0488.jpg">
-        <img src="./images/IMG_0489.jpg">
-        <img src="./images/IMG_0490.jpg">
-        <img src="./images/IMG_0491.jpg">
-        <img src="./images/IMG_0492.jpg">
+
+    <div class="full-img" id="fullImgBox">
+        <img src="./images/IMG_0485.jpg" id="fullImg">
+        <span onclick="closeFullImg()">x</span>
     </div>
+
+    <div class="img-gallery">
+        <img src="./images/IMG_0485.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0486.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0487.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0488.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0489.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0490.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0491.jpg" onclick="openFullImg(this.src)">
+        <img src="./images/IMG_0492.jpg" onclick="openFullImg(this.src)">
+    </div>
+
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
 </body>
 </html>

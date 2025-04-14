@@ -46,7 +46,7 @@
     margin: 2rem 0;
     color: #000;
     letter-spacing: .2rem;
-    align-items: center;
+    text-align: center;
     text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
  }
 

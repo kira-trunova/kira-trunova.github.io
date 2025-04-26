@@ -57,13 +57,14 @@
  }
 
  .video-container .video{
-    height: 15rem;
+    aspect-ratio: 5 / 3;
     width: 25rem;
     margin: 2rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
     overflow: hidden;
     border-radius: 1rem;
     position: relative;
+    flex-shrink: 0;
  }
 
  .video-container .video video{

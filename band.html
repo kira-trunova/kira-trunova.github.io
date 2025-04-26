@@ -58,14 +58,14 @@
     <script>
         const videos = document.querySelectorAll('video');
         const closeBtns = document.querySelectorAll('.close-btn');
-        videos.forEach(play => play.addEventListener('click', () =>{
+
+        videos.forEach(play => {play.addEventListener('click', () =>{
             videos.forEach(v => {
-                if (v !== play) {
                     v.parentElement.classList.remove('active');
                     v.pause();
                     v.currentTime = 0;
-                }
-            });
+                });
+            
             
             play.parentElement.classList.toggle('active');
             
@@ -77,17 +77,19 @@
                 play.currentTime = 0;
                 document.body.style.overflow = 'auto';
             }
-        }));
+        });
+        });
 
 
         closeBtns.forEach(btn => {
             btn.addEventListener('click', e => {
                 e.stopPropagation();
 
-                const video = btn.parentElement.querySelector('video');
-                video.classList.remove('active')
+                const videoContainer = btn.parentElement;
+                const video = videoContainer.querySelector('video');
                 video.pause();
                 video.currentTime = 0;
+                videoContainer.classList.remove('active');
                 document.body.style.overflow = 'auto';
             });
         });

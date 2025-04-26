@@ -56,10 +56,10 @@
 
 
     <script>
-        const video = document.querySelectorAll('video');
+        const videos = document.querySelectorAll('video');
         const closeBtns = document.querySelectorAll('.close-btn');
-        video.forEach(play => play.addEventListener('click', () =>{
-            video.forEach(v => {
+        videos.forEach(play => play.addEventListener('click', () =>{
+            videos.forEach(v => {
                 if (v !== play) {
                     v.classList.remove('active');
                     v.pause();
@@ -79,15 +79,15 @@
             }
         }));
 
-        
+
         closeBtns.forEach(btn => {
             btn.addEventListener('click', e => {
                 e.stopPropagation();
 
-                const videos = btn.parentElement.querySelector('video');
-                videos.classList.remove('active')
-                videos.pause();
-                videos.currentTime = 0;
+                const video = btn.parentElement.querySelector('video');
+                video.classList.remove('active')
+                video.pause();
+                video.currentTime = 0;
                 document.body.style.overflow = 'auto';
             });
         });

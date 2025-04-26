@@ -116,7 +116,7 @@
    padding: 0.2rem 0.6rem;
    cursor: pointer;
    z-index: 1000;
-   display: none;
+   display: block !important;
  }
 
 .video video.active ~ .close-btn {

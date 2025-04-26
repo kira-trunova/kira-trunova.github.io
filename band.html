@@ -29,29 +29,35 @@
         <div class="video-container">
             <div class="video">
                 <video src="./videos/cs4.mp4" controls></video>
+                <div class="close-btn">x</div>
             </div>
 
             <div class="video">
                 <video src="./videos/s24.mp4" controls></video>
+                <div class="close-btn">x</div>
             </div>
 
             <div class="video">
                 <video src="./videos/bdc2.mp4" controls></video>
+                <div class="close-btn">x</div>
             </div>
 
             <div class="video">
                 <video src="./videos/tom2.mp4" controls></video>
+                <div class="close-btn">x</div>
             </div>
 
             <div class="video">
                 <video src="./videos/kk5.mp4" controls></video>
+                <div class="close-btn">x</div>
             </div>
         </div>
     </div>
 
 
     <script>
-        var video = document.querySelectorAll('video');
+        const video = document.querySelectorAll('video');
+        const closeBtns = document.querySelectorAll('.close-btn');
         video.forEach(play => play.addEventListener('click', () =>{
             video.forEach(v => {
                 if (v !== play) {
@@ -65,11 +71,26 @@
             
             if(play.paused){
                 play.play();
+                document.body.style.overflow = 'hidden';
             }else{
                 play.pause();
                 play.currentTime = 0;
+                document.body.style.overflow = 'auto';
             }
         }));
+
+        
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.stopPropagation();
+
+                const videos = btn.parentElement.querySelector('video');
+                videos.classList.remove('active')
+                videos.pause();
+                videos.currentTime = 0;
+                document.body.style.overflow = 'auto';
+            });
+        });
     </script>
 
 

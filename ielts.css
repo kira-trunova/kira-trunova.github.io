@@ -41,9 +41,6 @@
     background: #FFBCDC;
  }
 
- body.modal-open {
-    overflow: hidden;
-  }
 
  .img-gallery {
     width: 50%;

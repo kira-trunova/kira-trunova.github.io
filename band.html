@@ -61,13 +61,13 @@
         videos.forEach(play => play.addEventListener('click', () =>{
             videos.forEach(v => {
                 if (v !== play) {
-                    v.classList.remove('active');
+                    v.parentElement.classList.remove('active');
                     v.pause();
                     v.currentTime = 0;
                 }
             });
             
-            play.classList.toggle('active');
+            play.parentElement.classList.toggle('active');
             
             if(play.paused){
                 play.play();
@@ -85,7 +85,7 @@
                 e.stopPropagation();
 
                 const video = btn.parentElement.querySelector('video');
-                video.classList.remove('active')
+                video.parentElement.classList.remove('active')
                 video.pause();
                 video.currentTime = 0;
                 document.body.style.overflow = 'auto';

@@ -88,7 +88,7 @@
     transform: scale(1.1);
  }
 
- .video-container .video.active video{
+ .video-container .video video.active {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -100,7 +100,7 @@
     border-radius: 1rem;
  }
 
- .video-container .video.active video:hover{
+ .video-container .video video.active:hover{
     transition: none;
     transform: translate(-50%, -50%) scale(1);
  }
@@ -119,6 +119,6 @@
    display: block !important;
  }
 
-.video.active .close-btn {
+.video video.active .close-btn {
    display: block;
  }

@@ -85,7 +85,7 @@
                 e.stopPropagation();
 
                 const video = btn.parentElement.querySelector('video');
-                video.parentElement.classList.remove('active')
+                video.classList.remove('active')
                 video.pause();
                 video.currentTime = 0;
                 document.body.style.overflow = 'auto';

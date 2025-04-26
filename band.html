@@ -23,34 +23,44 @@
         </div>
     </nav>
 
+
     <div class="container">
         <div class="heading">festival performances</div>
         <div class="video-container">
             <div class="video">
-                <video src="./videos/cs4.mp4"></video>
+                <video src="./videos/cs4.mp4" controls></video>
             </div>
 
             <div class="video">
-                <video src="./videos/s24.mp4"></video>
+                <video src="./videos/s24.mp4" controls></video>
             </div>
 
             <div class="video">
-                <video src="./videos/bdc2.mp4"></video>
+                <video src="./videos/bdc2.mp4" controls></video>
             </div>
 
             <div class="video">
-                <video src="./videos/tom2.mp4"></video>
+                <video src="./videos/tom2.mp4" controls></video>
             </div>
 
             <div class="video">
-                <video src="./videos/kk4.mp4"></video>
+                <video src="./videos/kk4.mp4" controls></video>
             </div>
         </div>
     </div>
 
+
     <script>
         var video = document.querySelectorAll('video');
         video.forEach(play => play.addEventListener('click', () =>{
+            video.forEach(v => {
+                if (v !== play) {
+                    v.classList.remove('active');
+                    v.pause();
+                    v.currentTime = 0;
+                }
+            });
+            
             play.classList.toggle('active');
             
             if(play.paused){
@@ -61,5 +71,7 @@
             }
         }));
     </script>
+
+
 </body>
 </html>
